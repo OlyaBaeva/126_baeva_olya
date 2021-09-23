@@ -3,15 +3,29 @@ public class Task_1 implements Task_1_base {
     public int subtask_1_if(int first, int second, int third) {
         // Вычислить и вернуть минимальный из трех полученных аргументов (first, second, third)
         // ------------------------------------------------------------------------------------
-        return 0; // Замените данный оператор кодом, решающим поставленную задачу.
+        if (first < second) {
+            second = first;
+        }
+        if (second < third) {
+            third = second;
+        }
+        return third;
     }
+
     @Override
     public boolean subtask_2_if(int year) {
         // Проверить, является ли год, переданный в параметре year, високосным.
         // Високосный год - это год, кратный четырем, но не кратный 100, либо кратный 400
-        // ------------------------------------------------------------------------------------
-        return false; // Замените данный оператор кодом, решающим поставленную задачу.
+        // -------------------------------------------------------------------
+
+        if (((year % 4 == 0) && (year % 100 != 0))|(year % 400 == 0)) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
+
     @Override
     public int subtask_3_if(double x, double y, double left_up_x, double left_up_y, double width, double height) {
         // Проверить, лежит ли точка с координатами (x, y) внутри невырожденного квадрата
@@ -24,8 +38,14 @@ public class Task_1 implements Task_1_base {
         // 2 - аргументы функции заданы некорректно
         // Допустимой погрешностью при сравнении переменных типа double считать 0.000001
         // ------------------------------------------------------------------------------------
-        return 0; // Замените данный оператор кодом, решающим поставленную задачу.
+        double d = 0.000001;
+        if ((width < d) | (height < d)) {
+            return 2;
+        }
+        if ((x-left_up_x > d)&&(left_up_x+width-x > d)&&(y-(left_up_y-height) > d)&&(left_up_y-y >d)) return 1;
+        else return 0;
     }
+
     @Override
     public int subtask_4_if(double x0, double y0, double k, double b) {
         // Проверить, как расположена точка с координатами (x0, y0)
@@ -36,16 +56,52 @@ public class Task_1 implements Task_1_base {
         // 2 - лежит на прямой
         // Допустимой погрешностью при сравнении переменных типа double считать 0.000001
         // ------------------------------------------------------------------------------------
-        return 0; // Замените данный оператор кодом, решающим поставленную задачу.
+        double d = 0.000001;
+        double y = k * x0 + b;
+        if (y0 - y > d) {
+            return 0;
+        }
+        else if (y - y0 > d) {
+            return 1;
+        }
+        else {
+            return 2;
+        }
     }
+
     @Override
     public String subtask_5_switch(int day_od_week) {
         // По номеру дня недели day_od_week вернуть его название на русском языке, записанное
         // с большой буквы. Дни едели отсчитываются с единицы. Если номер задан некорректно,
         // вернуть строку "Ошибка"
         // ------------------------------------------------------------------------------------
-        return ""; // Замените данный оператор кодом, решающим поставленную задачу.
+        switch (day_od_week) {
+            case 1:
+                return "Понедельник";
+            case 2:
+                return "Вторник";
+            //break;
+            case 3:
+                return "Среда";
+            //break;
+            case 4:
+                return "Четверг";
+            //break;
+            case 5:
+                return "Пятница";
+            //break;
+            case 6:
+                return "Суббота";
+            //break;
+            case 7:
+                return "Воскресенье";
+            //break;
+            default:
+                return "Ошибка";
+            //break;
+        }
     }
+
     @Override
     public String subtask_6_switch(int direction) {
         // По заданному направлению direction вернуть его название:
@@ -55,8 +111,25 @@ public class Task_1 implements Task_1_base {
         // 4 - восток
         // Во всех остальных случаях вернуть пустую строку
         // ------------------------------------------------------------------------------------
-        return ""; // Замените данный оператор кодом, решающим поставленную задачу.
+        switch (direction) {
+            case 1:
+                return "север";
+            //break;
+            case 2:
+                return "юг";
+            //break;
+            case 3:
+                return "запад";
+            //break;
+            case 4:
+                return "восток";
+            //break;
+            default:
+                return "";
+            //break;
+        }
     }
+
     @Override
     public int subtask_7_if(double vx, double vy, double vz, double speed, double time, double wall) {
         // Проверить, достигнет ли снаряд, летяший из точки (0, 0, 0)
@@ -67,8 +140,17 @@ public class Task_1 implements Task_1_base {
         // 2 - аргументы функции заданы некорректно
         // Допустимой погрешностью при сравнении переменных типа double считать 0.000001
         // ------------------------------------------------------------------------------------
-        return 0; // Замените данный оператор кодом, решающим поставленную задачу.
+        double d = 0.000001;
+        if (vx-speed == 0) return 0;
+        else
+        if (time - (wall/ (vx-speed)) > d){
+            return 1;
+        }
+        else {
+            return 0;
+        }
     }
+
     @Override
     public int subtask_8_if(double k1, double b1, double k2, double b2) {
         // Проверить, как друг относительно друга располагаются прямые y = k1*x + b1 и
@@ -78,6 +160,17 @@ public class Task_1 implements Task_1_base {
         // 3 - если совпадают
         // Допустимой погрешностью при сравнении переменных типа double считать 0.000001
         // ------------------------------------------------------------------------------------
-        return 0; // Замените данный оператор кодом, решающим поставленную задачу.
+        double d = 0.000001;
+        if ((Math.abs(k1 - k2) < d) && (Math.abs(b1 - b2) < d)) {
+            return 3;
+        }
+        else if ((Math.abs(k1 - k2) < d) && (Math.abs(b1 - b2) > d)) {
+            return 1;
+        }
+        else {
+            return 2;
+        }
     }
 }
+
+
