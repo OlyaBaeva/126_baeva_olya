@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6897bb;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">public class </span><span class="s1">Task_1 </span><span class="s0">implements </span><span class="s1">Task_1_base {</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public int </span><span class="s1">subtask_1_if(</span><span class="s0">int </span><span class="s1">first</span><span class="s0">, int </span><span class="s1">second</span><span class="s0">, int </span><span class="s1">third) {</span>
+        <span class="s2">// Вычислить и вернуть минимальный из трех полученных аргументов (first, second, third)</span>
+        <span class="s2">// ------------------------------------------------------------------------------------</span>
+        <span class="s0">if </span><span class="s1">(first &lt; second) {</span>
+            <span class="s1">second = first</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(second &lt; third) {</span>
+            <span class="s1">third = second</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">return </span><span class="s1">third</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public boolean </span><span class="s1">subtask_2_if(</span><span class="s0">int </span><span class="s1">year) {</span>
+        <span class="s2">// Проверить, является ли год, переданный в параметре year, високосным.</span>
+        <span class="s2">// Високосный год - это год, кратный четырем, но не кратный 100, либо кратный 400</span>
+        <span class="s2">// -------------------------------------------------------------------</span>
+
+        <span class="s0">if </span><span class="s1">(((year % </span><span class="s3">4 </span><span class="s1">== </span><span class="s3">0</span><span class="s1">) &amp;&amp; (year % </span><span class="s3">100 </span><span class="s1">!= </span><span class="s3">0</span><span class="s1">))|(year % </span><span class="s3">400 </span><span class="s1">== </span><span class="s3">0</span><span class="s1">)) {</span>
+            <span class="s0">return true;</span>
+        <span class="s1">}</span>
+        <span class="s0">else </span><span class="s1">{</span>
+            <span class="s0">return false;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public int </span><span class="s1">subtask_3_if(</span><span class="s0">double </span><span class="s1">x</span><span class="s0">, double </span><span class="s1">y</span><span class="s0">, double </span><span class="s1">left_up_x</span><span class="s0">, double </span><span class="s1">left_up_y</span><span class="s0">, double </span><span class="s1">width</span><span class="s0">, double </span><span class="s1">height) {</span>
+        <span class="s2">// Проверить, лежит ли точка с координатами (x, y) внутри невырожденного квадрата</span>
+        <span class="s2">// со сторонами, параллельными осям координат, левый верхний угол которого имеет</span>
+        <span class="s2">// координаты (left_up_x, left_up_y), ширина которого width, высота height.</span>
+        <span class="s2">// Точка на границе считается не лежащей внутри.</span>
+        <span class="s2">// В качестве результата вернуть:</span>
+        <span class="s2">// 0 - не лежит</span>
+        <span class="s2">// 1 - лежит</span>
+        <span class="s2">// 2 - аргументы функции заданы некорректно</span>
+        <span class="s2">// Допустимой погрешностью при сравнении переменных типа double считать 0.000001</span>
+        <span class="s2">// ------------------------------------------------------------------------------------</span>
+        <span class="s0">double </span><span class="s1">d = </span><span class="s3">0.000001</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">((width &lt; d) | (height &lt; d)) {</span>
+            <span class="s0">return </span><span class="s3">2</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">((x-left_up_x &gt; d)&amp;&amp;(left_up_x+width-x &gt; d)&amp;&amp;(y-(left_up_y-height) &gt; d)&amp;&amp;(left_up_y-y &gt;d)) </span><span class="s0">return </span><span class="s3">1</span><span class="s0">;</span>
+        <span class="s0">else return </span><span class="s3">0</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public int </span><span class="s1">subtask_4_if(</span><span class="s0">double </span><span class="s1">x0</span><span class="s0">, double </span><span class="s1">y0</span><span class="s0">, double </span><span class="s1">k</span><span class="s0">, double </span><span class="s1">b) {</span>
+        <span class="s2">// Проверить, как расположена точка с координатами (x0, y0)</span>
+        <span class="s2">// относительно прямой y = kx + b</span>
+        <span class="s2">// В качестве результата вернуть:</span>
+        <span class="s2">// 0 - лежит выше прямой</span>
+        <span class="s2">// 1 - лежит ниже прямой</span>
+        <span class="s2">// 2 - лежит на прямой</span>
+        <span class="s2">// Допустимой погрешностью при сравнении переменных типа double считать 0.000001</span>
+        <span class="s2">// ------------------------------------------------------------------------------------</span>
+        <span class="s0">double </span><span class="s1">d = </span><span class="s3">0.000001</span><span class="s0">;</span>
+        <span class="s0">double </span><span class="s1">y = k * x0 + b</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">(y0 - y &gt; d) {</span>
+            <span class="s0">return </span><span class="s3">0</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">else if </span><span class="s1">(y - y0 &gt; d) {</span>
+            <span class="s0">return </span><span class="s3">1</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">else </span><span class="s1">{</span>
+            <span class="s0">return </span><span class="s3">2</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">String subtask_5_switch(</span><span class="s0">int </span><span class="s1">day_od_week) {</span>
+        <span class="s2">// По номеру дня недели day_od_week вернуть его название на русском языке, записанное</span>
+        <span class="s2">// с большой буквы. Дни едели отсчитываются с единицы. Если номер задан некорректно,</span>
+        <span class="s2">// вернуть строку &quot;Ошибка&quot;</span>
+        <span class="s2">// ------------------------------------------------------------------------------------</span>
+        <span class="s0">switch </span><span class="s1">(day_od_week) {</span>
+            <span class="s0">case </span><span class="s3">1</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;Понедельник&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">2</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;Вторник&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">3</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;Среда&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">4</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;Четверг&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">5</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;Пятница&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">6</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;Суббота&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">7</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;Воскресенье&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+            <span class="s0">default</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;Ошибка&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">String subtask_6_switch(</span><span class="s0">int </span><span class="s1">direction) {</span>
+        <span class="s2">// По заданному направлению direction вернуть его название:</span>
+        <span class="s2">// 1 - север</span>
+        <span class="s2">// 2 - юг</span>
+        <span class="s2">// 3 - запад</span>
+        <span class="s2">// 4 - восток</span>
+        <span class="s2">// Во всех остальных случаях вернуть пустую строку</span>
+        <span class="s2">// ------------------------------------------------------------------------------------</span>
+        <span class="s0">switch </span><span class="s1">(direction) {</span>
+            <span class="s0">case </span><span class="s3">1</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;север&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">2</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;юг&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">3</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;запад&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">4</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot;восток&quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+            <span class="s0">default</span><span class="s1">:</span>
+                <span class="s0">return </span><span class="s4">&quot; &quot;</span><span class="s0">;</span>
+            <span class="s0">break;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public int </span><span class="s1">subtask_7_if(</span><span class="s0">double </span><span class="s1">vx</span><span class="s0">, double </span><span class="s1">vy</span><span class="s0">, double </span><span class="s1">vz</span><span class="s0">, double </span><span class="s1">speed</span><span class="s0">, double </span><span class="s1">time</span><span class="s0">, double </span><span class="s1">wall) {</span>
+        <span class="s2">// Проверить, достигнет ли снаряд, летяший из точки (0, 0, 0)</span>
+        <span class="s2">// в направлении (vx, vy, vz) со скоростью speed стены, параллельной плоскости OYZ,</span>
+        <span class="s2">// имеющей координату x равной wall, за время time</span>
+        <span class="s2">// 0 - не достигнет</span>
+        <span class="s2">// 1 - достигнет</span>
+        <span class="s2">// 2 - аргументы функции заданы некорректно</span>
+        <span class="s2">// Допустимой погрешностью при сравнении переменных типа double считать 0.000001</span>
+        <span class="s2">// ------------------------------------------------------------------------------------</span>
+        <span class="s0">double </span><span class="s1">d = </span><span class="s3">0.000001</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">(vx == </span><span class="s3">0</span><span class="s1">) </span><span class="s0">return </span><span class="s3">2</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">(time - (wall/vx) &gt; d){</span>
+            <span class="s0">return </span><span class="s3">1</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">else </span><span class="s1">{</span>
+            <span class="s0">return </span><span class="s3">0</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public int </span><span class="s1">subtask_8_if(</span><span class="s0">double </span><span class="s1">k1</span><span class="s0">, double </span><span class="s1">b1</span><span class="s0">, double </span><span class="s1">k2</span><span class="s0">, double </span><span class="s1">b2) {</span>
+        <span class="s2">// Проверить, как друг относительно друга располагаются прямые y = k1*x + b1 и</span>
+        <span class="s2">// y = k2*x + b2. Вернуть</span>
+        <span class="s2">// 1 - если параллельны</span>
+        <span class="s2">// 2 - если пересекаются</span>
+        <span class="s2">// 3 - если совпадают</span>
+        <span class="s2">// Допустимой погрешностью при сравнении переменных типа double считать 0.000001</span>
+        <span class="s2">// ------------------------------------------------------------------------------------</span>
+        <span class="s0">double </span><span class="s1">d = </span><span class="s3">0.000001</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">((Math.abs(k1 - k2) &lt; d) &amp;&amp; (Math.abs(b1 - b2) &lt; d)) {</span>
+            <span class="s0">return </span><span class="s3">3</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">else if </span><span class="s1">((Math.abs(k1 - k2) &lt; d) &amp;&amp; (Math.abs(b1 - b2) &gt; d)) {</span>
+            <span class="s0">return </span><span class="s3">1</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">else </span><span class="s1">{</span>
+            <span class="s0">return </span><span class="s3">2</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
