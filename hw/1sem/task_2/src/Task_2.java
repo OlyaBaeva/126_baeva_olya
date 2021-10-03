@@ -18,8 +18,13 @@ public class Task_2 implements Task_2_base {
     @Override
     public boolean subtask_3_while(int num, int base) {
         // Проверить, является ли число num натуральной степенью числа base
-        return false;
+        int t = num;
+        do {
+            t=t*num;
+        } while (t < base);
+        if (t != base) return false; else return true;
     }
+
 
     @Override
     public int subtask_4_while(int start, int end) {
