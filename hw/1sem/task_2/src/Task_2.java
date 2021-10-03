@@ -3,7 +3,11 @@ public class Task_2 implements Task_2_base {
     public int subtask_1_while(int num) {
         // Найти максимальное число, являющееся полным квадратом,
         // не превосходящее заданное натуральное num
-        return 0;
+        int i = 0;
+        do {
+            i++;
+        } while (i*i <= num);
+        return i*i;
     }
 
     @Override
@@ -12,7 +16,13 @@ public class Task_2 implements Task_2_base {
         // p(0) = 1
         // p(k) = 2 * p(k - 1) + 6, k > 0
         //Найти элемент последовательности с номером num
-        return 0;
+        int p = 1;
+        int k = 1;
+        do {
+            p= 2*p+6;
+            k++;
+        } while (k<num);
+        return p;
     }
 
     @Override
