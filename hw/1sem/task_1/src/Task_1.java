@@ -141,13 +141,16 @@ public class Task_1 implements Task_1_base {
         // Допустимой погрешностью при сравнении переменных типа double считать 0.000001
         // ------------------------------------------------------------------------------------
         double d = 0.000001;
-        if (vx-speed == 0) return 0;
-        else
-        if (time - (wall/ (vx-speed)) > d){
-            return 1;
-        }
-        else {
-            return 0;
+        if (time > d && speed > d) {
+            if ((Math.sqrt(wall*wall + vy*wall/vx*vy*wall/vx+ vz * wall / vx * vz * wall / vx)) / speed <= time) {
+                return 1;
+            } else if (Math.abs((Math.sqrt(wall*wall + vy*wall/vx*vy*wall/vx + vz*wall/vx*vz*wall/vx))/speed - time) < d) {
+                return 1;
+            } else {
+                return 0;
+            }
+        } else {
+            return 2;
         }
     }
 
