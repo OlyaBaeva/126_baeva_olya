@@ -6,8 +6,9 @@ public class Task_2 implements Task_2_base {
         int i = 0;
         do {
             i++;
-        } while (i*i <= num);
-        return i*i;
+            if (num < i*i) return ((i-1)*(i-1));
+        } while (i * i <= num);
+        return i * i;
     }
 
     @Override
@@ -18,21 +19,25 @@ public class Task_2 implements Task_2_base {
         //Найти элемент последовательности с номером num
         int p = 1;
         int k = 1;
+        if ( num == 0) return 1;
         do {
-            p= 2*p+6;
+            p = 2 * p + 6;
             k++;
-        } while (k<num);
+        } while (k <= num);
         return p;
     }
 
     @Override
     public boolean subtask_3_while(int num, int base) {
         // Проверить, является ли число num натуральной степенью числа base
-        int t = num;
+        int t = base;
+        if ((num==1)&&(base==1)) return true;
+        if (base <= 1) return false;
         do {
-            t=t*num;
-        } while (t < base);
-        if (t != base) return false; else return true;
+            t = t * base;
+        } while (t < num);
+        if (t != num) return false;
+        else return true;
     }
 
 
@@ -44,10 +49,11 @@ public class Task_2 implements Task_2_base {
         // число start можно превратить в end. Гарантируется, что start >= end >=
         int d = start;
         int f = 0;
+        if ( start == end) return 0;
         do {
-            if (d % 2 == 0) d=d/2; else d=d-1;
+            if ((d % 2 == 0)&&(d/2>=end)) d=d/2; else d=d-1;
             f++;
-        } while (d!=end);
+        } while (d>end);
         return f;
     }
 }
