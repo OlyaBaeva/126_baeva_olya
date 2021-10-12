@@ -4,12 +4,14 @@ public class Task_3 implements Task_3_base {
         // подсчитать, сколько чисел, кратных a, но не кратных b,
         // находится между числами n1 и n2 включительно
         int r = 0;
-        int k = 0;
-        int t = 0;
+        int n3 = 0;
+         if ( n1 > n2) {
+             n3 = n1;
+             n1=n2;
+             n2=n3;
+         }
         for ( int n = n1; n <= n2; n++) {
-            k= n%a;
-            t= n%b;
-            if ((k== 0) && ( t != 0))  r++;
+            if ((n%a==0) && ( n%b != 0))  r++;
         }
         return r;
     }
@@ -26,10 +28,15 @@ public class Task_3 implements Task_3_base {
         // Найти, какое число будет находиться в этой последовательности
         // на позиции num
         int a = num;
+        if ( a == 1) return 1;
+        int r = 1;
         for (int i = 2; i <=num; i++) {
-            a=a*10+num;
+            for (int j = 1;j <=i;j++) {
+                r+=1;
+                if ( r==num) return i;
+            }
         }
-        return a;
+        return num;
     }
 
     @Override
@@ -39,7 +46,8 @@ public class Task_3 implements Task_3_base {
         // a(n) = a(n - 1) * d + 1
         // Найти сумму первых cnt элементов последовательности
         int s = 0;
-        for ( int a=num; a<=cnt; a++){
+        int a = num;
+        for ( int i=1; i<=cnt; i++){
             s=s+a;
             a=a*d+1;
         }
@@ -52,7 +60,8 @@ public class Task_3 implements Task_3_base {
         // S(n) = 1 + 1 * 2 + 1 * 2 * 3 + ... + n!
         // для заданного n
         // (n! - это n-факториал. Кто не знает - гуглите)
-        int s = 0;
+        int s = 1;
+        if  (n == 1) return 1;
         for ( int t= 2; t<=n; t++) {
             int y = 1;
             for (int d = 2; d <= t; d++) y = y * d;
