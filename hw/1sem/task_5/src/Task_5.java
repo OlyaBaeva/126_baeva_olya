@@ -87,13 +87,12 @@ public class Task_5 implements Task_5_base {
         // для данного списка в процентах
         HashMap<String,Double> type = new HashMap<>();
         double r;
-        for (int i =0;i < data.size();i++){
-            r=0;
-            for(int j=0;j< data.size(); j++){
-                if (i == j) continue;
-                if (data.get(i)==data.get(j)) r++;
+        for (int i =0;i < data.size();i++) {
+            r = 0;
+            for(int j=0;j< data.size(); j++) {
+                if (data.get(i) == data.get(j)) r++;
             }
-            type.put(data.get(i),r/data.size()*100);
+            type.put(data.get(i), r/data.size()*100);
         }
         return type;
     }
