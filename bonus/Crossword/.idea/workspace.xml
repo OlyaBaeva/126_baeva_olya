@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0aec4672-d3b0-4127-b5ef-ed7af9d22aca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crossword.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_1/out/production/task_1/Runner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_1/task_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_2/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_2/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_2/out/production/task_2/Runner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_2/task_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_3/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_3/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_3/out/production/task_3/Runner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_3/task_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_4/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_4/task_4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_5/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_5/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_5/out/production/task_5/Runner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_5/out/production/task_5/Task_5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_5/task_5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hw/1sem/task_7/task_7.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Crossword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Crossword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw/1sem/task_6/.idea/libraries/Task_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw/1sem/task_2/.idea/libraries/Task_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hw/1sem/task_6/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../hw/1sem/task_1/.idea/modules.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1zSEKzvGfNPfF6phHM50bwloJc4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../hw/1sem/task_8" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Crossword" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Crossword" />
+      <module name="Crossword" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Crossword" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0aec4672-d3b0-4127-b5ef-ed7af9d22aca" name="Changes" comment="" />
+      <created>1634133036312</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634133036312</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
