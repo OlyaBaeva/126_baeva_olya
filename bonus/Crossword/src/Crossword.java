@@ -1,9 +1,11 @@
+import java.io.*;
+import java.io.IOException;
 import java.util.Scanner;
 import java.lang.*;
 public class Crossword {
 
      // вывод на консоль заставки
-    public static void printZ()  {
+    public static void printZ() throws IOException {
         String p2, p1, p3, p4, p5,p25;
         String z1, z2, z3, z4;
         p1 = " ";
@@ -19,6 +21,19 @@ public class Crossword {
         for (int i=0; i<12;i++){
             System.out.println();
         }
+
+
+            try {
+                String symbole =p25+z2+p4+z2+p3+z4+z3+p3+p2+z3+z3+p3+p2+z3+z3+p3+p2+z3+z3+p3+p1+z4+z3+p3+p2+z3+z3+p4+z4+z3+p3
+                        +p3+z3+z3;
+            FileOutputStream win = new FileOutputStream("filename1.bin");
+            DataOutputStream outStream = new DataOutputStream(new BufferedOutputStream(win));
+            outStream.writeUTF(symbole);
+            outStream.close();
+            } catch (FileNotFoundException e){
+                System.out.println("Ошибка файл не найден");
+            }
+
         System.out.println(p25+z2+p4+z2+p3+z4+z3+p3+p2+z3+z3+p3+p2+z3+z3+p3+p2+z3+z3+p3+p1+z4+z3+p3+p2+z3+z3+p4+z4+z3+p3
                 +p3+z3+z3);
         System.out.println(p25 + z2 + p4 + z2 + p3 + z3 + p2 + z3 + p3 + z3 + p2 + z3 + p3 + z3 + p2 + z3 + p3 + z3 + p2
@@ -283,7 +298,7 @@ public class Crossword {
                 if (SearchGor | SearchVer) {
                     Nbox -= 1;
                     printCross(T, strQw);
-                    System.out.println(comT[Nbox+1]);
+                    System.out.println(comT[Nbox]);
                     if (Nbox < 1) GameOver = true;
                 } else {
                     printCross(T, strQw);
