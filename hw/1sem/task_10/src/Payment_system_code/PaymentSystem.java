@@ -9,8 +9,12 @@ public class PaymentSystem {
         contractsCount = 0;
     }
 
-    public void addContract(String name, String phone) {
+    public void addContract(String number, String date) {
+        if (number == null) {
+            throw new IllegalArgumentException("Number can not be null");
+        }
         contractsCount++;
+
     }
 
     public static PaymentSystem create(){

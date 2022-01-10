@@ -22,6 +22,6 @@ public class FirstTest extends Assert {
     public void addContract_AddContractWithNullNumber_ThrowsException() {
         PaymentSystem paymentSystem = PaymentSystem.create();
         var exc = assertThrows(IllegalArgumentException.class, () -> paymentSystem.addContract(null, "data"));
-        assertTrue(exc.getMessage().toLowerCase().contains("name can not be null"));
+        assertTrue(exc.getMessage().toLowerCase().contains("number can not be null"));
     }
 }
