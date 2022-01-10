@@ -10,6 +10,9 @@ public class PaymentSystem {
     }
 
     public void addContract(String number, String date) {
+        if (number == null && date== null) {
+            throw new IllegalArgumentException("Number can not be null, date can not be null");
+        }
         if (number == null) {
             throw new IllegalArgumentException("Number can not be null");
         }
