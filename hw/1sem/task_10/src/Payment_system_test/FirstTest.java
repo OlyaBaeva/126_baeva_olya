@@ -1,5 +1,6 @@
 package Payment_system_test;
 
+import Payment_system_code.*;
 import org.junit.*;
 
 public class FirstTest extends Assert {
