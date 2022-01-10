@@ -31,4 +31,13 @@ public class FirstTest extends Assert {
         assertTrue(exc.getMessage().toLowerCase().contains("date can not be null"));
 
     }
+
+    @Test
+    public void addContract_AddContractWithNullDateAndNumber_ThrowsException() {
+        PaymentSystem paymentSystem = PaymentSystem.create();
+        var exc = assertThrows(IllegalArgumentException.class, () -> paymentSystem.addContract(null , null));
+        assertTrue(exc.getMessage().toLowerCase().contains("date can not be null")&&
+                exc.getMessage().toLowerCase().contains("number can not be null"));
+
+    }
 }
