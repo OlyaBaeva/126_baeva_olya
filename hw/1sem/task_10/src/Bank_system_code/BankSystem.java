@@ -53,6 +53,16 @@ public class BankSystem {
                 return false;
             }
         }
+    public Contract findContractByNumber(String contractNumber){
+        for (Contract contract : contracts){
+            if (Objects.equals(contract.getNumber(), contractNumber)) {
+                System.out.println("Найден договор с номером: " + contractNumber);
+                return contract;
+            }
+        }
+        return null;
+    }
+
     public HashSet<Contract> getContracts() {
         return contracts;
     }
