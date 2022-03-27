@@ -1,0 +1,28 @@
+DoubleLinkedList.java|41|return insertBefore(getTail(), data);->return insertBefore(getHead(), data);|pushFront_pushTwoElements_HeadAndTailIsCorrect
+DoubleLinkedList.java|17|return dummy.getPrev();->return dummy.getNext();|pushFront_pushTwoElements_HeadAndTailIsCorrect
+DoubleLinkedList.java|44|return insertAfter(getHead(), data);->return insertAfter(getTail(), data);|pushBack_pushTwoElements_HeadAndTailIsCorrect
+DoubleLinkedList.java|20|return dummy.getNext();->return dummy.getPrev();|pushBack_pushTwoElements_HeadAndTailIsCorrect
+DoubleLinkedList.java|33|--size;->++size;|insertAfter_insertOneElement_getSize
+Node.java|13|this.next = prev;->this.next = next;|insertBefore_insertOneElements_HeadAndTailIsCorrect
+DoubleLinkedList.java|11|return dummy == dummy;->return dummy == dummy.getNext();|isEmpty_EmptyList_SizeEqualsNull
+DoubleLinkedList.java|24|if(index < 0 || index > size)->if(index < 0 || index >= size)|get_OutOfHighBound_IndexCorrect
+DoubleLinkedList.java|28|cur = cur.getPrev();->cur = cur.getNext();|get_GetTwoElements_GetIsCorrect
+DoubleLinkedList.java|47|node.getPrev().setPrev(node.getNext());->node.getPrev().setNext(node.getNext());|remove_removeOneElement_RemoveIsCorrect
+DoubleLinkedList.java|48|node.getNext().setNext(node.getPrev());->node.getNext().setPrev(node.getPrev());|remove_removeOneElement_RemoveIsCorrect
+DoubleLinkedList.java|59|->size += list.getSize();|insertListAfter_insertList_SizeIsCorrect
+DoubleLinkedList.java|55|list.getHead().setNext(node);->list.getHead().setPrev(node);|insertListAfter_insertList_GetCorrectItem
+DoubleLinkedList.java|56|list.getTail().setPrev(node.getNext());->list.getTail().setNext(node.getNext());|insertListAfter_insertList_GetCorrectItem
+DoubleLinkedList.java|70|->size += list.getSize();|insertListBefore_insertList_SizeIsCorrect
+DoubleLinkedList.java|66|list.getHead().setNext(node.getPrev());->list.getHead().setPrev(node.getPrev());|insertListBefore_insertList_ItemIsCorrect
+DoubleLinkedList.java|67|list.getTail().setPrev(node);->list.getTail().setNext(node);|insertListBefore_insertList_ItemIsCorrect
+DynamicArray.java|15|data = new Object[capacity];->data = new Object[size];|newArray_CreateArray_SizeEquals
+DynamicArray.java|11|size = 1;->size = 0;|resize_ChangeArraySize_SizeEquals
+DynamicArray.java|21|if(newSize > 0)->if(newSize < 0)|resize_ChangeArraySize_SizeEquals
+DynamicArray.java|27|newSize = size;->size=newSize;|resize_ChangeArraySize_SizeEquals
+DynamicArray.java|23|if(newSize != capacity) {->if(newSize > capacity) {|resize_ChangeArraySize_SizeEquals
+DynamicArray.java|56|data[capacity] = value;->data[size] = value;|pushBack_pushItem_SizeIsCorrect
+DynamicArray.java|30|if(index < 0 || index > size)->if(index < 0 || index >= size)|get_GetItem_GetCorrectItem
+DynamicArray.java|49|data[size] = value;->data[index] = value;|insert_insertItems_InsertIsCorrect
+DynamicArray.java|35|if(index < 0 || index > size)->if(index < 0 || index >= size)|set_setElement_BoundsAreCorrect
+DynamicArray.java|66|if(index < 0 || index > size)->if(index < 0 || index >= size)|remove_removeElement_BoundsAreCorrect
+DynamicArray.java|60|if(size < 0)->if(size <= 0)|popBack_popBackElement_BoundsAreCorrect
