@@ -9,10 +9,10 @@ public class Task2_Tests extends Assert {
     }
     @Test
     public void sort_SimpleData_BubbleSortIsCorrect(){
-        Integer[] data = {4, 5, 8, 1, 3};
+        Integer[] data = {1,1,1};
         BubbleSort<Integer> bSort= new BubbleSort<>();
         bSort.sort(data, new TestComparator());
-        assertArrayEquals(new Integer[] {1,3,4,5,8}, data);
+        assertArrayEquals(new Integer[] {1,1,1}, data);
     }
     @Test
     public void sort_DecreaseData_BubbleSortIsCorrect(){
@@ -39,18 +39,18 @@ public class Task2_Tests extends Assert {
     }
     @Test
     public void sort_DecreaseData_InsertionSortIsCorrect(){
-        Integer[] data = {3,2,1};
+        Integer[] data = {3,0,1,2};
         InsertionSort<Integer> iSort = new InsertionSort<>();
         iSort.sort(data, new TestComparator());
-        assertArrayEquals(new Integer[] {1,2,3}, data);
+        assertArrayEquals(new Integer[] {0,1,2,3}, data);
 
     }
     @Test
     public void sort_someData_InsertionSortIsCorrect(){
-        Integer[] data = {2,5,7,1,8};
+        Integer[] data = {333,0,22,4,1};
         InsertionSort<Integer> iSort = new InsertionSort<>();
         iSort.sort(data, new TestComparator());
-        assertArrayEquals(new Integer[] {1,2,5,7,8}, data);
+        assertArrayEquals(new Integer[] {0,1,4,22,333}, data);
     }
     @Test
     public void sort_SimpleData_SelectionSortIsCorrect(){
@@ -63,17 +63,25 @@ public class Task2_Tests extends Assert {
 
     @Test
     public void sort_SomeData_SelectionSortIsCorrect(){
-        Integer[] data = {1,2,3};
+        Integer[] data = {2,1};
         SelectionSort<Integer> sSort = new SelectionSort<>();
         sSort.sort(data, new TestComparator());
-        assertArrayEquals(new Integer[] {1,2,3}, data);
+        assertArrayEquals(new Integer[] {1,2}, data);
     }
     @Test
-    public void sort_DifficultData_SelectionSortIsCorrect(){
-        Integer[] data = {9,5,7,2,1,0};
+    public void sort_DecreaseData_SelectionSortIsCorrect(){
+        Integer[] data = {3,2,5};
         SelectionSort<Integer> sSort = new SelectionSort<>();
         sSort.sort(data, new TestComparator());
-        assertArrayEquals(new Integer[] {0,1,2,5,7,9}, data);
+        assertArrayEquals(new Integer[] {2,3,5}, data);
+    }
+
+    @Test
+    public void sort_DifficultData_SelectionSortIsCorrect(){
+        Integer[] data = {1,2,3,4,0};
+        SelectionSort<Integer> sSort = new SelectionSort<>();
+        sSort.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[] {0,1,2,3,4}, data);
     }
 
 
