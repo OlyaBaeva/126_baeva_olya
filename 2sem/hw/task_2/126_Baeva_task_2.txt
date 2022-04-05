@@ -4,8 +4,8 @@ BubbleSort.java|6|if(comparator.compare(data[i - 1], data[i]) < 0) {->if(compara
 InsertionSort.java|6|while (cur > 0 && comparator.compare(data[cur - 1], data[cur]) <= 0){->while (cur > 0 && comparator.compare(data[cur - 1], data[cur]) > 0){|sort_SimpleData_InsertionSortIsCorrect
 InsertionSort.java|4|for (int sortedSize = 0; sortedSize < data.length; ++sortedSize) {->for (int sortedSize = 1; sortedSize < data.length; ++sortedSize) {|sort_DecreaseData_InsertionSortIsCorrect
 InsertionSort.java|8|++cur;->--cur;|sort_DecreaseData_InsertionSortIsCorrect
-SelectionSort.java|4|for(int sortedSize = 1; sortedSize < data.length - 1; ++sortedSize) {->for(int sortedSize = 0; sortedSize < data.length - 1; ++sortedSize) {|SomeData_SelectionSortIsCorrect
-SelectionSort.java|10|T tmp = data[data.length - sortedSize];->T tmp = data[data.length-1 - sortedSize];|SomeData_SelectionSortIsCorrect
-SelectionSort.java|11|data[data.length - sortedSize] = data[maxInd];->data[data.length- 1 - sortedSize] = data[maxInd];|SomeData_SelectionSortIsCorrect
+SelectionSort.java|4|for(int sortedSize = 1; sortedSize < data.length - 1; ++sortedSize) {->for(int sortedSize = 0; sortedSize < data.length - 1; ++sortedSize) {|sort_SomeData_SelectionSortIsCorrect
+SelectionSort.java|10|T tmp = data[data.length - sortedSize];->T tmp = data[data.length-1 - sortedSize];|sort_SomeData_SelectionSortIsCorrect
+SelectionSort.java|11|data[data.length - sortedSize] = data[maxInd];->data[data.length- 1 - sortedSize] = data[maxInd];|sort_SomeData_SelectionSortIsCorrect
 SelectionSort.java|5|int maxInd = 1;->int maxInd = 0;|sort_DecreaseData_SelectionSortIsCorrect
 SelectionSort.java|8|maxInd = sortedSize;->maxInd = i;|sort_DecreaseData_SelectionSortIsCorrect
