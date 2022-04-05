@@ -136,6 +136,18 @@ public class Task1_Tests extends Assert {
         assertEquals(10, item2.getData().intValue());
     }
     @Test
+    public void remove_removeLastElement_RemoveIsCorrect() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushBack(10);
+        list.pushFront(20);
+        list.pushBack(23);
+        Node<Integer> item1 = (Node<Integer>) list.getTail();
+        list.remove(item1);
+        Node<Integer> item2 = (Node<Integer>) list.getTail();
+        assertEquals(10, item2.getData().intValue());
+    }
+
+    @Test
     public void insertListAfter_insertList_SizeIsCorrect() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
         list.pushBack(10);

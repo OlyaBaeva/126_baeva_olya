@@ -4,11 +4,12 @@ DoubleLinkedList.java|44|return insertAfter(getHead(), data);->return insertAfte
 DoubleLinkedList.java|20|return dummy.getNext();->return dummy.getPrev();|pushBack_pushTwoElements_HeadAndTailIsCorrect
 DoubleLinkedList.java|33|--size;->++size;|insertAfter_insertOneElement_getSize
 Node.java|13|this.next = prev;->this.next = next;|insertBefore_insertOneElements_HeadAndTailIsCorrect
+Node.java|14|this.prev = next;->this.prev = prev;|insertBefore_insertOneElements_HeadAndTailIsCorrect
 DoubleLinkedList.java|11|return dummy == dummy;->return dummy == dummy.getNext();|isEmpty_EmptyList_SizeEqualsNull
 DoubleLinkedList.java|24|if(index < 0 || index > size)->if(index < 0 || index >= size)|get_OutOfHighBound_IndexCorrect
 DoubleLinkedList.java|28|cur = cur.getPrev();->cur = cur.getNext();|get_GetTwoElements_GetIsCorrect
 DoubleLinkedList.java|47|node.getPrev().setPrev(node.getNext());->node.getPrev().setNext(node.getNext());|remove_removeOneElement_RemoveIsCorrect
-DoubleLinkedList.java|48|node.getNext().setNext(node.getPrev());->node.getNext().setPrev(node.getPrev());|remove_removeOneElement_RemoveIsCorrect
+DoubleLinkedList.java|48|node.getNext().setNext(node.getPrev());->node.getNext().setPrev(node.getPrev());|remove_removeLastElement_RemoveIsCorrect
 DoubleLinkedList.java|59|->size += list.getSize();|insertListAfter_insertList_SizeIsCorrect
 DoubleLinkedList.java|55|list.getHead().setNext(node);->list.getHead().setPrev(node);|insertListAfter_insertList_GetCorrectItem
 DoubleLinkedList.java|56|list.getTail().setPrev(node.getNext());->list.getTail().setNext(node.getNext());|insertListAfter_insertList_GetCorrectItem
