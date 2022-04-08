@@ -63,6 +63,13 @@ public class Task2_Tests extends Assert {
 
     @Test
     public void sort_SomeData_SelectionSortIsCorrect(){
+        Integer[] data = {1,2,3};
+        SelectionSort<Integer> sSort = new SelectionSort<>();
+        sSort.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[] {1,2,3}, data);
+    }
+    @Test
+    public void sort_IncreaseData_SelectionSortIsCorrect(){
         Integer[] data = {2,1};
         SelectionSort<Integer> sSort = new SelectionSort<>();
         sSort.sort(data, new TestComparator());
