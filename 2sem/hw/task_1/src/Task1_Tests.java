@@ -28,9 +28,7 @@ public class Task1_Tests extends Assert {
         list.pushFront(10);
         list.pushFront(20);
         Node<Integer> head = (Node<Integer>) list.getHead();
-        Node<Integer> tail = (Node<Integer>) list.getTail();
         assertEquals(20, head.getData().intValue());
-        assertEquals(10, tail.getData().intValue());
     }
 
     @Test
@@ -49,9 +47,7 @@ public class Task1_Tests extends Assert {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
         list.pushBack(10);
         list.pushBack(20);
-        Node<Integer> head = (Node<Integer>) list.getHead();
         Node<Integer> tail = (Node<Integer>) list.getTail();
-        assertEquals(10, head.getData().intValue());
         assertEquals(20, tail.getData().intValue());
     }
 
